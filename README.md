@@ -7,11 +7,16 @@ I specifically used the `useSWR` hook implementation of the SWR strategy from ht
 
 ## App Explained
 The app represents the travel-companion through a mock frontend and a mock api built with [next.js](https://nextjs.org/).
-* The web-app launches on http://localhost:3000/
+* The web-app launches on http://localhost:3000/ and the api runs on http://localhost:3000/api
 * The data driven features of the travel-companion are represented through gray boxes. The random words in the boxes represent the latest data fetched from the server. This way it's possible to see if the cache has been revalidated.
 * For this experiment I assumed that the user always enters the page through the login on `/` and gets redirected to `/home`. The data is then preloaded on `\home`
 * The api is mocked through next.js api routes. The response times of each route is slightly different to simulate a real backend. (see /pages/[api](pages%2Fapi))
 * For reference. The app should look like this: https://share.cleanshot.com/jZGWxqCC
+
+## Setup
+1. Clone the repo and `cd` into it
+2. Install dependencies with `npm install`
+3. Run the app with `npm run dev`
 
 ## Timing
 The data is fetched and the cache revalidated under the following conditions:
