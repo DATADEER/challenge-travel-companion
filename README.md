@@ -29,6 +29,7 @@ All these timing events together ensure that the data is up-to-date without havi
 ## Implementation in React
 useSWR offers a React hook that exposes the `data`, `loading`-state, `errors` and a revalidation function (`mutate()`).
 By default, a useSWR request is triggered immediately once the connected component renders. The `mutate()` function is used to manually trigger a revalidation.
+I used a custom cache provider for SWR that stores the data in localStorage. It's implemented in [WithLocalStorageSWRConfig.tsx](shared%2FHOC%2FWithLocalStorageSWRConfig.tsx)
 
 ### Advantages
 Compared to using barebone fetch requests you can use the hooks in as many places as you want without major drawbacks. Every request is cached and the data will always be taken from the cache first.
